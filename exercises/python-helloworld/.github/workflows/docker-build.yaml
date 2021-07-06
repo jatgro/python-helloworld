@@ -30,10 +30,6 @@ jobs:
           file: ./Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: user/app:latest
+          tags: jgrover1/python-helloworlds:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-
-secrets: |
-  DOCKERHUB_USERNAME=jgrover1
-  DOCKERHUB_TOKEN=3b310fa7-4d66-4a7c-b446-10bd41b6ef36
